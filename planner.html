@@ -1,0 +1,30 @@
+<!DOCTYPE html>
+<html lang="fr">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>Planner Quotidien</title>
+  <link rel="stylesheet" href="stylee.css">
+</head>
+<body>
+  <div class="container">
+    <!-- En-tête avec la date et l'heure -->
+    <div class="header">
+      <h1>Planner Quotidien</h1>
+      <div id="dateTime"></div>
+    </div>
+
+    <!-- Formulaire pour ajouter une tâche -->
+    <div class="task-form">
+      <input type="text" id="taskInput" placeholder="Ajouter une tâche">
+      <input type="time" id="taskTime">
+      <button id="addTaskButton">Ajouter</button>
+    </div>
+
+    <!-- Liste des tâches -->
+    <ul id="taskList"></ul>
+  </div>
+
+  <script src="planner.js"></script>
+</body>
+</html>
