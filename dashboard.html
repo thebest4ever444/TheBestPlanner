@@ -1,57 +1,24 @@
 <!DOCTYPE html>
 <html lang="fr">
 <head>
-  <meta charset="UTF-8">
-  <meta name="viewport" content="width=device-width, initial-scale=1.0">
-  <title>Tableau de Bord</title>
-  <link rel="stylesheet" href="styles.css">
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Dashboard - Planner</title>
+    <link rel="stylesheet" href="styles.css">
 </head>
 <body>
-  <!-- Barre de déconnexion et photo de profil -->
-  <div class="profile-bar">
-    <img id="profilePicture" src="" alt="Photo de profil">
-    <button onclick="logout()">Déconnexion</button>
-  </div>
-
-  <!-- Contenu principal -->
-  <div class="container">
-    <h1>Bienvenue sur notre monde cher ami</h1>
-    <p id="welcomeMessage"></p>
-    <!-- Bouton pour commencer le planner -->
-    <button id="startPlannerButton">Let's Start the Planner</button>
-  </div>
-
-  <script>
-    // Afficher le message de bienvenue
-    const currentUser = JSON.parse(localStorage.getItem('currentUser'));
-    if (currentUser) {
-      document.getElementById('welcomeMessage').textContent = `Bonjour, ${currentUser.username} !`;
-    } else {
-      window.location.href = 'index.html'; // Rediriger si aucun utilisateur n'est connecté
-    }
-
-    // Fonction de déconnexion
-    function logout() {
-      localStorage.removeItem('currentUser');
-      window.location.href = 'index.html';
-    }
-
-    // Charger une photo de profil aléatoire
-    fetch('https://randomuser.me/api/')
-      .then(response => response.json())
-      .then(data => {
-        const profilePicture = data.results[0].picture.large;
-        document.getElementById('profilePicture').src = profilePicture;
-      })
-      .catch(error => {
-        console.error('Erreur lors du chargement de la photo de profil:', error);
-        document.getElementById('profilePicture').src = 'https://via.placeholder.com/150'; // Image de secours
-      });
-
-    // Redirection vers la page du planner
-    document.getElementById('startPlannerButton').addEventListener('click', () => {
-      window.location.href = 'planner.html';
-    });
-  </script>
+    <header>
+        <span>UPDATE 1.0</span>
+    </header>
+    <main>
+        <h1>Bienvenue, <span id="usernameDisplay"></span>!</h1>
+        <p>Commencez à organiser votre journée avec notre planner.</p>
+        <button onclick="location.href='planner.html'">Let's start to planner</button>
+        <button onclick="logout()">Déconnexion</button>
+    </main>
+    <footer>
+        <img src="palestine_flag.png" alt="Drapeau de la Palestine" style="width: 30px;">
+    </footer>
+    <script src="script.js"></script>
 </body>
 </html>
