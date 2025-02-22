@@ -1,0 +1,28 @@
+<!DOCTYPE html>
+<html lang="fr">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Planner - Planner</title>
+    <link rel="stylesheet" href="styles.css">
+</head>
+<body>
+    <header>
+        <span>UPDATE 1.0</span>
+    </header>
+    <main>
+        <h1>Planner</h1>
+        <div id="datetime"></div>
+        <form id="noteForm">
+            <textarea id="note" placeholder="Écrivez votre note ici..."></textarea>
+            <input type="datetime-local" id="noteDateTime" required>
+            <button type="submit">Ajouter la note</button>
+        </form>
+        <div id="notesContainer"></div> <!-- Conteneur pour afficher les notes -->
+    </main>
+    <footer>
+        <img src="palestine_flag.png" alt="Drapeau de la Palestine" style="width: 30px;">
+    </footer>
+    <script src="script.js"></script>
+</body>
+</html>
