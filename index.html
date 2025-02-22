@@ -1,32 +1,27 @@
 <!DOCTYPE html>
 <html lang="fr">
 <head>
-  <meta charset="UTF-8">
-  <meta name="viewport" content="width=device-width, initial-scale=1.0">
-  <title>Sign Up & Login</title>
-  <link rel="stylesheet" href="style.css">
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Login - Planner</title>
+    <link rel="stylesheet" href="styles.css">
 </head>
 <body>
-  <div class="container">
-    <div class="form-container">
-      <!-- Formulaire de Sign Up -->
-      <form id="signupForm" class="form">
-        <h2>Créer un Compte</h2>
-        <input type="text" id="signupUsername" placeholder="Nom d'utilisateur" required>
-        <input type="password" id="signupPassword" placeholder="Mot de passe" required>
-        <button type="submit">S'inscrire</button>
-      </form>
-
-      <!-- Formulaire de Login -->
-      <form id="loginForm" class="form">
-        <h2>Se Connecter</h2>
-        <input type="text" id="loginUsername" placeholder="Nom d'utilisateur" required>
-        <input type="password" id="loginPassword" placeholder="Mot de passe" required>
-        <button type="submit">Connexion</button>
-      </form>
-    </div>
-  </div>
-
-  <script src="script.js"></script>
+    <header>
+        <span>UPDATE 1.0</span>
+    </header>
+    <main>
+        <h1>Connexion</h1>
+        <form id="loginForm">
+            <input type="text" id="username" placeholder="Nom d'utilisateur" required>
+            <input type="password" id="password" placeholder="Mot de passe" required>
+            <button type="submit">Se connecter</button>
+        </form>
+        <p>Pas de compte? <a href="signup.html">Inscrivez-vous</a></p>
+    </main>
+    <footer>
+        <img src="palestine_flag.png" alt="Drapeau de la Palestine" style="width: 30px;">
+    </footer>
+    <script src="script.js"></script>
 </body>
 </html>
